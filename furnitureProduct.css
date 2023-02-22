@@ -1,0 +1,57 @@
+
+  #header{
+    display: flex;
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: #ece8e8;
+
+  }
+
+  /* style the list */
+  ul.breadcrumb li{
+    display: inline;
+  }
+
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: rgb(93, 91, 91);
+    content: " > ";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #737576;
+    text-decoration: none;
+  }
+ 
+
+  ul.productLinks li{
+    display: inline;
+    margin-left: 30px;
+  }
+  .productLinksDiv{
+    margin-left: 500px;
+  }
+
+  ul.productLinks li a {
+    color: #737576;
+    text-decoration: none;
+  }
+
+  #container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  /* style the filter side bar  */
+
+  #data-list-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+  }
+  #data-list-wrapper img{
+    width: 200px
+  }
+  
+  
