@@ -4,9 +4,324 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentoMojo Clone</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Elite lease </title>
 </head>
 <body>
-    Project Started
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Navbar section start-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+  <div id="navbar">
+
+    <div onclick="goToHome()"><img src="./logo.png.jpg" alt="err">
+            
+    </div>
+
+        <div><img src="./Elitelogo.png" alt=""> </div>
+        
+       
+       
+        
+
+
+        <div>
+            <div id="location">
+                <p id="change_location">Jaipur</p><img
+                    src="https://cdn.icon-icons.com/icons2/1904/PNG/512/downarrow_121316.png" alt="">
+            </div>
+        </div>
+
+        <div><input type="text" id="nav_search" oninput="nav_search_fn()" placeholder="Search for Product"  >
+        <!-- <input type="image" src="./search.png"> -->
+        </div>
+
+
+        <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="cart_clicked()" alt=""></div>
+
+        
+        <div><button id="home_login_button" onclick="show_login_popup()">LOGIN / SIGNUP</button></div>
+    </div>
+
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Navbar section end-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Location Box start-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
+
+<!-- <div id="location_box">
+    <div><button id="location_box_close">Close</button>
+     <a href="Navigation.html"><button id="check_map">Map view</button></a>
+    </div>
+</div> -->
+
+
+
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- location box end-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
+
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Banner section Start-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
+
+
+
+     <!-- |---------------------------------------------------------|
+          |                cont(Main div)                           |
+          |---------------------------------------------------------|  -->
+
+
+<div id="cont">
+
+     <!-- |---------------------------------------------------------|
+          |                 Banner                                  |
+          |---------------------------------------------------------|  -->
+
+
+    <div class="banner">
+
+
+        <!-- |---------------------------------------------------------|
+             |                 Banner_inner                            |
+             |---------------------------------------------------------|  -->
+
+
+             <!--  Banner inner cover:   [consisting 3-div]  ,   [banner_image]   , [banner_indicator]  ,   [banner_control]   -->
+
+        <div class="banner_inner">
+            <div class="banner_item banner_item__active">
+                <img src="https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" alt="" class="banner_img">
+            </div>
+
+         <!--  |---------------------------------------------------------|
+               |                 Banner_item                             |
+               |---------------------------------------------------------|  -->
+
+            <div class="banner_item">
+                <img src="https://s.rmjo.in/Fitness-offer-banner-for-Web--2.jpg" alt="" class="banner_img">
+            </div>
+             <div class="banner_item">
+                <img src="https://s.rmjo.in/AC-Offer-Banner-Web-.jpg" alt="" class="banner_img">
+            </div>
+
+
+            
+         <!--  |---------------------------------------------------------|
+               |                Banner_indicator(button)                 |
+               |---------------------------------------------------------|  -->
+
+
+            <div class="banner_indicator">
+                <button class="banner_dot banner_dot__active"></button>
+                <button class="banner_dot"></button>
+                <button class="banner_dot"></button>
+            </div>
+
+           
+   
+         <!--  |---------------------------------------------------------|
+               |                Banner_control_(button)                  |
+               |---------------------------------------------------------|  -->
+
+                
+            <!-- <div class="banner_control">
+                <button class="banner_button banner_button__prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <button class="banner_button banner_button__next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>  -->
+          
+    </div>
+
+    <div class="covid-warn">
+        <p>
+            Safety precautions during COVID-19. We’re taking additional steps and precautionary measures to
+            protect our community from COVID-19. <span><a href="">  Know more > </a></span></p>
+    </div>
+
+
+</div>
+
+
+         <!--  |---------------------------------------------------------|
+               |                items(product/appliances)                |
+               |---------------------------------------------------------|  -->
+
+
+<div id="items">
+    <a href="furniture.html">
+    <div><img src="https://i.ibb.co/HhXHCsB/Screenshot-4335.png" alt="" /></div>
+    </a>
+    <a href="furniture.html">
+
+        <div> <img src="https://i.ibb.co/m0YCPLm/fur.png" alt="" /></div>
+    </a>
+    <a href="appliances.html">
+
+        <div> <img src="https://i.ibb.co/xswBYxk/app.png" alt="" /></div>
+    </a>
+    <a href="appliances.html">
+    <div> <img src="https://i.ibb.co/zNdbgpw/ele.png" alt="" /></div>
+    </a>
+    <a href="furniture.html">
+    <div><img src="https://i.ibb.co/1zdRzRm/fitness.png" alt="" /></div>
+    </a>
+    <a href="appliances.html">
+    <div><img src="https://i.ibb.co/s5QjXKP/essen.png" alt="" /></div>
+    </a>
+</div>
+
+
+         <!--  |---------------------------------------------------------|
+               |               Products(Div)                             |
+               |---------------------------------------------------------|  -->
+
+<div id="sectionitem">
+
+
+        <h2>You'll love to</h2>
+        <h2 class="thin">take these home</h2>
+
+
+<div id="mainProducts" onclick="window.open('appliances.html')">
+
+
+   <div>
+     <img src="https://p.rmjo.in/productSquare/247ark4n-500x500.jpg" alt="">
+     <h5>Felix 3-Seater Fabric Sofa</h5>
+     <div> <span>₹ 789/Month</span> <button onclick="window.open('furniture.html')" >See more</button></div>
+   </div>
+
+
+
+   <div>
+    <img src="https://p.rmjo.in/productSquare/9o9eoir3-500x500.jpg" alt="">
+    <h5>Garfield Ottoman Sofa</h5>
+    <div> <span>₹ 189/Month</span> <button onclick="window.open('furniture.html')">See more</button></div>
+  </div>
+
+
+  <div>
+    <img src="https://p.rmjo.in/productSquare/xal2ozbg-500x500.jpg" alt="">
+    <h5>LED TV - 32"</h5>
+    <div> <span>₹ 949/Month</span> <button onclick="window.open('appliances.html')">See more</button></div>
+  </div>
+
+
+  <div>
+    <img src="https://p.rmjo.in/productSquare/f9pryp0h-500x500.jpg" alt="">
+    <h5>Top Load Washing Machine</h5>
+    <div> <span>₹ 769/Month</span> <button onclick="window.open('appliances.html')">See more</button></div>
+  </div>
+
+
+  <div >
+    <img src="https://p.rmjo.in/productSquare/b28pmhld-500x500.jpg" alt="">
+    <h5>Casper 3-Seater Fabric Sofa</h5>
+    <div> <span>₹ 719/Month</span> <button onclick="window.open('furniture.html')">See more</button></div>
+  </div>
+
+
+</div>
+
+
+</div>
+
+
+         <!--  |---------------------------------------------------------|
+               |               Products(Div)/End............    ######   |
+               |---------------------------------------------------------|  -->
+
+</div>
+
+    
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Banner section end-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
+
+         <!--  |---------------------------------------------------------|
+               |               Service-section                           |
+               |---------------------------------------------------------|  -->
+
+
+ <div id="service">
+           
+    <h2>There's More</h2>
+    <h2>to renting........</h2>
+
+
+    <div id="cont3">
+
+
+        <div >
+            <img src="https://i.ibb.co/6r032rM/sub1.jpg" alt="">
+            <h3>Finest-quality products</h3>
+            <p>Quality matters to you, and us! That's why we do a strict quality-check for every product.</p>
+        </div>
+
+
+        <div >
+            <img src="https://i.ibb.co/wMwTZPV/sub2.jpg" alt="">
+            <h3>Free relocation</h3>
+            <p>Changing your house or even your city? We'll relocate your rented products for free.</p>
+        </div>
+
+
+        <div >
+            <img src="https://i.ibb.co/ckv3sKg/sub3.jpg" alt="">
+            <h3>Free maintenance</h3>
+            <p>Keeping your rented products in a spick and span condition is on us, so you can sit back and
+                relax.</p>
+        </div>
+
+
+        <div >
+            <img src="https://i.ibb.co/dW4yGF7/sub4.jpg" alt="">
+            <h3>Cancel anytime</h3>
+            <p>Pay only for the time you use the product and close your subscription without any hassle.</p>
+        </div>
+
+
+        <div >
+            <img src="https://i.ibb.co/N1W5m0K/sub5.jpg" alt="">
+            <h3>Easy return on delivery</h3>
+            <p>If you don't like the product on delivery, you can return it right away—no questions asked.</p>
+        </div>
+
+
+        <div >
+            <img src="https://i.ibb.co/MN9hLbP/sub6.jpg" alt="">
+            <h3>Keep upgrading</h3>
+            <p>Bored of the same product? Upgrade to try another, newer design and enjoy the change!</p>
+        </div>
+
+
+    </div>
+
+    <a href="">
+        <h2 id="know">KNOW MORE</h2>
+    </a>
+</div>
+ 
+
 </body>
 </html>
+<script  src="index.js"> </script>
+
+
+
+
+
+
+
