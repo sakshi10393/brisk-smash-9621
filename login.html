@@ -11,16 +11,19 @@
         /* background-color: rgb(178, 233, 248); */
         background-color: white;
         position: fixed;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 4;
         display: none;
         flex-direction: column;
-        width: 20%;
+        width: 50%;
         height: 400px;
         text-align: center;
         box-shadow: 4px 4px 10px;
+    }
+    #log input {
+        height: 48px;
     }
 
     #log>div {
@@ -64,16 +67,36 @@
         background-color: white;
 
     }
+    #log_2 {
+        margin-left: 20%;
+        /* background-color: #f5f7fa;
+        height: 100%; */
+    }
+    #loginButton {
+        border-radius: 10px;
+    padding: 14px 20px;
+    font-size: 12px;
+    width: 100px;
+    font-weight: 700;
+    background-color: rgb(230, 118, 118);
+    color:white
+    }
 </style>
 <body>
     Project Started
-   
+
         <!-- <a id="login">Login</a> -->
         <div  id="loginn"><a id="login_btn" href="">Login</a></div>
 
         <div id="log">
+            <div>
+                <img src="/cat.png" height="300px" width="300px" />
+            </div>
+            <div id="log_2">
             <div><button id="login_hide_btn">+</button></div>
             <div>
+                <p>Enter your number to
+                    Login</p>
                 <input type="text" id="mobileNo" placeholder="Enter Your Mobile Number">
                 <div id="otp">
                     <input type="text" id="OtpNo" placeholder="Enter Your OTP">
@@ -82,6 +105,7 @@
             <div>
                 <Button id="loginButton" onclick="alter()">Login</Button>
             </div>
+        </div>
         </div>
 </body>
 </html>
@@ -96,7 +120,7 @@ let mob_flag = false
 // var count=0;
 //     button.addEventListener("click",function() {
 //         count++;
-        
+
 //         if(count >1) {
 //             let otp= document.getElementById("OtpNo");
 
@@ -128,12 +152,12 @@ function alter() {
             alert("Please Enter Valid Mobile No")
         } else {
             if(mobileNo == "7209991080") {
-                
+
             }
             flag = true;
             mob_flag = true
             if(flag == true) {
-        
+
                 otp_field.style.display = "block";
                 // return;
             }
@@ -154,7 +178,7 @@ function alter() {
                     let p = document.createElement("p");
                     p.innerHTML = "Welcome";
                     loginn.append(p)
-                    
+
 
                 } else {
                     alert("Please Enter Valid OTP")
