@@ -1,0 +1,342 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto 40px auto;
+    padding: 10px 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  
+  #navbar > div:nth-child(1) {
+    display: none;
+  }
+  #navbar > div:nth-child(2) {
+    cursor: pointer;
+  }
+  
+  
+  #location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20px;
+    cursor: pointer;
+  }
+  
+  #location > img {
+    width: 50%;
+    margin: 0px 5px;
+  }
+  
+  #navbar > div:nth-child(4) {
+    width: 50%;
+  }
+  
+  #navbar > div:nth-child(4) > input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(207, 207, 207);
+    background-color: rgb(247, 247, 247);
+    color: black;
+  }
+  
+  #navbar > div:nth-child(4) > input:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #navbar > div:nth-child(5) {
+    width: 55px;
+    margin-left: 5px;
+  }
+  
+  #navbar > div:nth-child(5) > img {
+    width: 100%;
+  }
+  
+  #navbar > div:nth-child(6) > button {
+    color: white;
+    background-color: rgb(204, 3, 3);
+    border: 1px solid rgb(204, 3, 3);
+    /* border: none; */
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+  
+  #navbar > div:nth-child(6) > button:hover {
+    background-color: white;
+    color: rgb(204, 3, 3);
+    border: 1px solid rgb(204, 3, 3);
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+  
+  #search_down {
+    display: none;
+  }
+  
+  #menu {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 55%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 0px;
+    display: none;
+    z-index: 2;
+  }
+  
+  #menu > div:nth-child(1) {
+    margin: 30px 20px 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #menu > div:nth-child(1) > div:nth-child(2) {
+    width: 25px;
+  }
+  
+  #menu > div:nth-child(1) > div:nth-child(2) > img {
+    width: 100%;
+  }
+  
+  #menu > div:nth-child(2) {
+    margin: 10px 0px 0px 40px;
+  }
+  
+  #menu > div:nth-child(2) > ul > li {
+    list-style-type: none;
+    padding: 5px;
+    margin: 25px 0px;
+  }
+  
+  #menu > div:nth-child(2) > ul > li > a {
+    text-decoration: none;
+    color: rgb(126, 126, 126);
+  }
+  
+  #dropdown_menu_close {
+    cursor: pointer;
+  }
+  
+  #dropdown_menu_open {
+    cursor: pointer;
+  }
+  
+  #location_box {
+    position: fixed;
+    top: 50px;
+    width: 70%;
+    left: 15%;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* display: grid; */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    display: none;
+    z-index: 2;
+  }
+  
+  #location_box > div {
+    cursor: pointer;
+  }
+  
+  #location_box > div:nth-child(1) {
+    grid-area: 1/1/2/5;
+    width: 150px;
+    margin: 20px auto;
+  }
+  
+  #location_box > div:nth-child(1) > button {
+    background-color: rgb(214, 214, 214);
+    border-radius: 0px;
+    padding: 10px 30px;
+    border: 1px solid rgb(205, 205, 205);
+    font-size: 20px;
+    width: 100%;
+    color: rgb(84, 84, 84);
+  }
+  
+  #location_box > div:nth-child(1) > button:hover {
+    background-color: white;
+  }
+  
+  @media all and (max-width: 1000px) {
+    #navbar {
+      width: 100%;
+      padding: 10px 0px;
+      margin-bottom: 0px;
+      box-shadow: none;
+    }
+  
+    #navbar > div:nth-child(1) {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15px;
+    }
+  
+    #navbar > div:nth-child(1) > img:nth-child(1) {
+      margin-left: 15px;
+    }
+  
+    #navbar > div:nth-child(1) > img:nth-child(2) {
+      margin-left: 15px;
+    }
+  
+    #navbar > div:nth-child(2) {
+      display: none;
+    }
+  
+    #navbar > div:nth-child(3) {
+      display: none;
+    }
+  
+    #navbar > div:nth-child(4) {
+      display: none;
+    }
+  
+    #navbar > div:nth-child(6) {
+      display: none;
+    }
+  
+    #navbar > div:nth-child(5) {
+      margin-right: 15px;
+    }
+  
+    #search_down {
+      display: block;
+      width: 80%;
+      margin: 0px auto 20px auto;
+    }
+  
+    #search_down > input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      border: 1px solid rgb(207, 207, 207);
+      background-color: rgb(247, 247, 247);
+      color: black;
+    }
+  }
+  
+  /* this is login signup */
+  #login_popup {
+    width: 64vw;
+    /* height: 80vh; */
+    position: fixed;
+    top: 10vh;
+    left: 18vw;
+    /* padding: 20px; */
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    background-color: white;
+    z-index: 2;
+  }
+  
+  #login_popup > div:nth-child(1) {
+    width: 45%;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  
+  #login_popup > div:nth-child(1) > img {
+    width: 90%;
+  }
+  
+  #login_popup > div:nth-child(2) {
+    width: 45%;
+    padding-top: 40px;
+    padding-right: 50px;
+  }
+  
+  #login_popup > div:nth-child(2) > label {
+    margin-top: 20%;
+  }
+  
+  #login_popup > div:nth-child(2) > input {
+    width: 100%;
+    margin-top: 4px;
+    padding: 5px;
+  }
+  
+  #login_popup > div:nth-child(2) > button {
+    width: 100%;
+    margin-top: 55%;
+    padding: 5px;
+  }
+  
+  @media all and (max-width: 900px) {
+    #login_popup_img {
+      display: none;
+    }
+  
+    #login_popup > div:nth-child(2) {
+      width: 70%;
+      padding: 40px;
+      margin: auto;
+    }
+  }
+  
+  /* navbar ended here  */
+  
+  #emptyCart {
+    max-width: 400px;
+    margin: 60px auto;
+  }
+  #emptyCart > img {
+    width: 100%;
+  }
+  #emptyCart > h1 {
+    text-align: center;
+  }
+  #emptyCart > p {
+    text-align: center;
+    color: rgb(124, 124, 124);
+  }
+  #emptyCart > div {
+    width: 170px;
+    margin: 10px auto;
+  }
+  #emptyCart > div > button {
+    width: 100%;
+    padding: 8px 2px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(229, 57, 57);
+    border: 1px solid rgb(229, 57, 57);
+    cursor: pointer;
+  }
+  
+  #cart {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  #cartItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .remove_btn {
+    padding: 10px 15px;
+    font-size: 12px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+  }
+  
