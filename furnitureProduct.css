@@ -125,4 +125,126 @@
     color: #7d7c7c;
     font-size: small;
   }
- 
+  #wishes {
+    margin-top: 70px;
+    background-color: #fcfcfc;
+    width: 100%;
+    /* margin-left: -180px; */
+    padding: 70px 0px;
+  }
+  
+  
+  #wishes .p {
+    width: 80%;
+    margin: auto;
+    background-color: #f5f7fa;
+    /* border: 5px solid black; */
+  } 
+  
+  
+              /* |---------------------------------------------------------|
+                 |           Footer                                        |
+                 |---------------------------------------------------------|  */
+  
+  
+  #mainfooter {
+    margin-top: 70px;
+    background-color: #f5f7fa;
+    width: 133%;
+    margin-left: -180px;
+    padding: 70px 0px;
+    /* border: 5px solid rgb(230, 84, 84); */
+  
+  }
+  
+  #mainfooter .p {
+    width: 80%;
+    margin: auto;
+    background-color: #f5f7fa;
+    /* border: 5px solid black; */
+  }
+  
+  
+  #footer {
+    display: flex;
+    font-family: "Muli";
+     gap: 80px;
+  
+   justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    background-color: #f5f7fa;
+    /* border: 5px solid rgb(26, 202, 233); */
+  padding: 15px;
+  
+  }
+  
+  #footer>div{
+  /* border: 1px dashed rgb(238, 18, 220); */
+  /* display: flex;
+  justify-content: start; */
+  /* padding-left: -15px; */
+  }
+  
+  
+  #footer li {
+    width: 100%;
+    list-style: none;
+    margin: 25px;
+    /* border: 2px solid red; */
+  }
+  
+  #footer a {
+    text-decoration: none;
+    color: black;
+    /* border: 2px solid rgb(41, 197, 101); */
+  }
+  
+  #footer a:hover {
+    color: rgb(235, 18, 18);
+    text-decoration: underline;
+  }
+  
+  
+  #footer ol > div {
+    display: flex;
+    gap: 20px;
+    /* border: 2px solid rgb(26, 115, 233); */
+  }
+  
+  #footer ol > div img {
+    width: 30%;
+    /* border: 2px solid rgb(231, 118, 11); */
+  }
+  
+  #footer ol button {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 20px 15px;
+    /* border: 5px solid rgb(147, 223, 194); */
+  }
+  
+  
+  #bottom_footer {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+    
+  }
+  
+  .B {
+    
+    display: flex;
+    
+  }
+  
+  .B img {
+    width: 40%;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+  }
