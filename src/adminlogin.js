@@ -20,6 +20,8 @@ const password = passwordInput ? passwordInput.value : "";
     .then((data) => {
       console.log(data)
       const user = data.find((user) => {
+        const userData = { email, username, password };
+        localStorage.setItem("userCredentials", JSON.stringify(userData));
         return user.email === email && user.username === username && user.password === password;
       });
 
