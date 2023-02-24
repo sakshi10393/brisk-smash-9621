@@ -48,81 +48,10 @@
   #data-list-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    margin-top: 50px;
-    margin-right: 200px;
-    /* border: 1px solid red; */
-    margin-left: 25px;
-  }
-  #data-list-wrapper div{
-    /* border: 1px solid green; */
+    gap: 10px;
   }
   #data-list-wrapper img{
-    width: 100%;
-  }
-  #filter-sideBar{
-    width: 250px;
-    margin-top: 25px;
-    margin-left: 100px;
-  }
-  #filter-sideBar .filters-text{
-    font-size: 20px;
-    margin-left: 20px;
-    /* font-weight: 200; */
-    color: #7d7c7c;
-    font-family: sans-serif;
-  }
-  #filter-sideBar p{
-    /* color: #737576; */
-    font-size: 14px;
-    margin-left: 20px;
-    font-weight: 400;
-    color: #313131;
-    font-family: sans-serif;
-
-
+    width: 200px
   }
   
-  #rooms-filter-parent{
-    border: 1px solid rgb(163, 161, 161);
-    margin-top: 20px;
-    margin-left: 20px;
-    line-height: 30px;
-  }
-  #product-type-filter-parent{
-    border: 1px solid rgb(163, 161, 161);
-    margin-top: 20px;
-    margin-left: 20px;
-    line-height: 30px;
-
-  }
-
-  #sort{
-    margin-top: 20px;
-    padding: 10px 10px;
-    margin-left: 20px;
-    width: 230px;
-    border:1px solid #737576;
-
-  }
-
-  #rooms-filter input{
-    margin-left: 20px;
-  }
-  #rooms-filter{
-    font-family: sans-serif;
-    color: #7d7c7c;
-    font-size: small;
-
-  }
-  .product-type-filter input{
-    margin-left: 20px;
-    /* margin-bottom: 20px; */
-    font-family: sans-serif;
-  }
-  .product-type-filter{
-    font-family: sans-serif;
-    color: #7d7c7c;
-    font-size: small;
-  }
- 
+  
