@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation bar */
+  .nav{
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 234, 234);
+}
+
+.image {
+    width: 70px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+.image > img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.brand{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.right {
+    margin-right: 50px;
+    margin-left: auto;
+}
+/* main body */
+main{
+    width:100%;
+    display: flex;
+}
+ /* sidebar */
+ .sidebar {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(240, 234, 234);
+  }
+  .centre{
+    list-style: none;
+    margin: 20px;
+  }
+  .centre li {
+    margin-left: 30px;
+    margin-top: 15px;
+  }
+  .centre li i {
+    font-size: 20px;
+  }
+  .centre li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  .Logout{
+    list-style: none;
+    margin: 20px;
+    margin-top: 350px;
+  }
+  .Logout li{
+    margin-left: 30px;
+    margin-top: 15px;
+  }
+  .Logout li i {
+    font-size: 20px;
+  }
+  .Logout li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  /* product */
+  .product{
+    position: fixed;
+    width: 80%;
+    margin-left: 20%;
+    border: 5px solid red;
+    height: 100%;
+  }
