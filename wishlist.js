@@ -1,0 +1,1 @@
+let wishlistLS = JSON.parse(localStorage.getItem("wishlistedItem"))
