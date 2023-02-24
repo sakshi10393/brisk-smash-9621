@@ -39,8 +39,12 @@
         <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="cart_clicked()" alt=""></div>
 
         
-        <div><button id="home_login_button" onclick="show_login_popup()">LOGIN / SIGNUP</button></div>
-    </div>
+        <!-- <div><button id="home_login_button" onclick="show_login_popup()">LOGIN / SIGNUP</button></div> -->
+        <!-- <div id="loginn">
+ <div class="login_button_1" id="loginn"><a id="login_btn" href="">Login  </a></div>
+</div>    -->
+<div  id="loginn"><span id="login_btn" href="">Login</span></div>
+</div>
 
  <!-- ------------------------------------------------------------------------------------------------   -->
 <!-- Navbar section end-->
@@ -313,7 +317,30 @@
         <h2 id="know">KNOW MORE</h2>
     </a>
 </div>
- 
+ <!-- login page html -->
+
+ <!-- <div  id="loginn"><a id="login_btn" href="">Login</a></div> -->
+
+        <div id="log">
+            <div>
+                <img src="/cat.png" height="300px" width="300px" />
+            </div>
+            <div id="log_2">
+            <div><button id="login_hide_btn">+</button></div>
+            <div>
+                <p>Enter your number to
+                    Login</p>
+                <input type="text" id="mobileNo" placeholder="Enter Your Mobile Number">
+                <div id="otp">
+                    <input type="text" id="OtpNo" placeholder="Enter Your OTP">
+                </div>
+            </div>
+            <div>
+                <Button id="loginButton" onclick="alter()">Login</Button>
+            </div>
+        </div>
+        </div>
+
 
 </body>
 </html>
