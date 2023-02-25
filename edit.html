@@ -7,6 +7,7 @@
     <title>AdminDashboard</title>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/style/admindashboard.css">
+    <link rel="stylesheet" href="/style/product.css">
 </head>
 <body>
     <div class="nav">
@@ -48,7 +49,34 @@
             </li>
         </ul>
     </div>
+    <div class="home-content">
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Fetch Updated Data list</div>
+            <div class="sales-details">
+              <!-- Fetch Updated Data -->
+  
+            </div>
+          </div>
+            <div id="form">
+              <p>Edit Items</p>
+              <form>
+                <input type="number" id="addid" placeholder="Enter Id" required />
+                <input type="mail" id="addCategory" placeholder="Image Link" required />
+                <input type="text" id="addTitle" placeholder="Enter Title" required />
+                <input type="number" id="addPrice" placeholder="Enter price" required />
+  
+                <p style="color: black;margin-bottom: 25px; margin-top: 25px">
+                  Note: Product details will get updated in the site, make sure
+                  before updating details.
+                </p>
+                <input style="font-size: 18px; width: 94%" type="button" id="addBtn" value="Edit Product" />
+              </form>
+  
+            </div>
+          </div>
+        </div>
     </main>
 </body>
-<script src="/src/admindashboard.js"></script>
+<script src="/src/edit.js"></script>
 </html>

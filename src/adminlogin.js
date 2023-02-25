@@ -1,5 +1,5 @@
 
-const apiUrl = "https://jsonservereliteleaseproject.onrender.com/admin";
+const apiUrl = "https://projecteliteleasejsonserver.onrender.com/admin";
 
 const loginForm = document.querySelector("form");
 const loginButton = document.querySelector("#button");
