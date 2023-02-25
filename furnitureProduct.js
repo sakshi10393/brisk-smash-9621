@@ -1,14 +1,19 @@
 
 let mainSection = document.getElementById("data-list-wrapper")
+let productArray =JSON.parse(localStorage.getItem("View Details")) || [];;
+// let cartArray =JSON.parse(localStorage.getItem("cart")) || [];
+let bedroom = document.getElementById("bedroom")
+let checkBoxs = document.querySelectorAll("#rooms-filter input")
 
-let cartArray =JSON.parse(localStorage.getItem("cart")) || [];
+checkBoxs.forEach((inputTag)=>{
+    inputTag.addEventListener('change',filterData)
+})
 
-let url = "https://jsonserverproject.onrender.com/Furniture";
+let sortEl = document.getElementById("sort")
 
-window.addEventListener("load", () => {
-    fetchAndRenderProducts();
-    
-  });
+let url = "https://jsonservereliteleaseproject.onrender.com/Furniture";
+let sortDesc = "https://jsonservereliteleaseproject.onrender.com/Furniture?_sort=price&_order=desc";
+let sortAsc = "https://jsonservereliteleaseproject.onrender.com/Furniture?_sort=price&_order=asc";
 
 
 
@@ -49,13 +54,25 @@ function display(data){
         addToCartBtn.innerText = "Add To Cart"
         
         
-        addToCartBtn.addEventListener("click",(e)=>{
+        let quickViewBtn = document.createElement("button")
+        quickViewBtn.classList.add("quick-view")
+        quickViewBtn.innerText = "View Details"
+        // addToCartBtn.addEventListener("click",(e)=>{
+        //     e.preventDefault();
+        //     cartArray.push(element)
+        //     localStorage.setItem("cart",JSON.stringify(cartArray))
+        // })
+       
+        quickViewBtn.addEventListener("click",(e)=>{
             e.preventDefault();
-            cartArray.push(element)
-            localStorage.setItem("cart",JSON.stringify(cartArray))
+            productArray.push(element)
+            localStorage.setItem("view-details",JSON.stringify(productArray))
+            window.location.href = "productDetails.html"
         })
 
-        card.append(image,title,price,addToCartBtn);
+        card.append(image,title,price,quickViewBtn);
+
+       
         mainSection.append(card);
     });
 }

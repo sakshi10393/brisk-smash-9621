@@ -48,10 +48,93 @@
   #data-list-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+
+    gap: 30px;
+    margin-top: 50px;
+    margin-right: 200px;
+    /* border: 1px solid red; */
+    margin-left: 25px;
+  }
+  #data-list-wrapper div{
+    /* border: 1px solid green; */
+  
   }
   #data-list-wrapper img{
     width: 200px
   }
   
+  #rooms-filter-parent{
+    border: 1px solid rgb(163, 161, 161);
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 30px;
+  }
+  #product-type-filter-parent{
+    border: 1px solid rgb(163, 161, 161);
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 30px;
+
+  }
+
+  #sort{
+    margin-top: 20px;
+    padding: 10px 10px;
+    margin-left: 20px;
+    width: 230px;
+    border:1px solid #737576;
+
+  }
+
+  #rooms-filter input{
+    margin-left: 20px;
+  }
+  #rooms-filter{
+    font-family: sans-serif;
+    color: #7d7c7c;
+    font-size: small;
+
+  }
+  .product-type-filter input{
+    margin-left: 20px;
+    /* margin-bottom: 20px; */
+    font-family: sans-serif;
+  }
+  .product-type-filter{
+    font-family: sans-serif;
+    color: #7d7c7c;
+    font-size: small;
+  }
+  #data-list-wrapper i{
+
+  }
+  #data-list-wrapper .quick-view{
+    display: none;
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    text-decoration: none;
+   
+
+  }
+
+  #data-list-wrapper > div:hover .quick-view{
+    display: block;
+    color: black;
+    z-index: 1;
+    background-color: white;
+    border: .5px solid gray;
+    font-size: smaller;
+  }
+  #data-list-wrapper .quick-view:focus{
+    color: white;
+    background-color: rgb(49, 47, 47);
+  }
+  #data-list-wrapper > div:hover p{
+    display: none;
+  }
+  #data-list-wrapper > div:hover{
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  }
   
