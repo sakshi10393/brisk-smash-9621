@@ -48,6 +48,7 @@
   #data-list-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+
     gap: 30px;
     margin-top: 50px;
     margin-right: 200px;
@@ -56,31 +57,10 @@
   }
   #data-list-wrapper div{
     /* border: 1px solid green; */
+  
   }
   #data-list-wrapper img{
-    width: 100%;
-  }
-  #filter-sideBar{
-    width: 250px;
-    margin-top: 25px;
-    margin-left: 100px;
-  }
-  #filter-sideBar .filters-text{
-    font-size: 20px;
-    margin-left: 20px;
-    /* font-weight: 200; */
-    color: #7d7c7c;
-    font-family: sans-serif;
-  }
-  #filter-sideBar p{
-    /* color: #737576; */
-    font-size: 14px;
-    margin-left: 20px;
-    font-weight: 400;
-    color: #313131;
-    font-family: sans-serif;
-
-
+    width: 200px
   }
   
   #rooms-filter-parent{
@@ -157,3 +137,4 @@
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   }
+  
