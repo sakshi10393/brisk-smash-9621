@@ -394,3 +394,47 @@ ul.productLinks li a {
 .card p{
   margin-left: 10px;
 }
+
+/* login/logout hover links*/
+
+.login-dropdown{
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 150px;
+  right: 70px;
+  padding-left: 20px;
+  font-family: sans-serif;
+}
+.login-dropdown a{
+  color: rgb(100, 99, 99);
+  text-decoration: none;
+  display: block; 
+  line-height: 20px;
+}
+/* .login-dropdown p{
+ font-size: smaller;
+  font-weight: lighter;
+  line-height: 0px;
+} */
+#login-button:hover .login-dropdown {
+  display: block;
+}
+
+.logout-link{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.wishlist-link{
+  padding-top: 15px;
+}
+.fa-heart{
+  margin-right: 10px;
+}
+.fa-right-from-bracket{
+  margin-right: 10px;
+
+}
