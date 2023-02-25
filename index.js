@@ -83,3 +83,8 @@ function alter() {
 
 
 
+
+function cart_clicked() {
+    location.href = "cart.html"
+    // alert("b")
+}
