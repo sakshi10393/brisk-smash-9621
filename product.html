@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminDashboard</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style/admindashboard.css">
+    <link rel="stylesheet" href="/style/product.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="image">
+            <img src="/image/EliteLease.jpg" alt="error">
+        </div>
+        <div class="brand">
+            EliteLease
+        </div>
+        <div class="right">
+            <p>Hey! <span id="adminname"></span></p>
+        </div>
+    </div>
+    <main>
+         <!-- side bar -->
+        <div class="sidebar">
+        <ul class="centre">
+            <li >
+                <i class='bx bx-grid-alt'></i>
+                <a href="admindashboard.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class='bx bx-folder-plus'></i>
+                <a href="product.html">Add Product</a>
+            </li>
+            <li>
+                <i class='bx bx-edit-alt'></i>
+                <a href="edit.html">Edit Product</a>
+            </li>
+            <li>
+                <i class='bx bx-message-square-minus'></i>
+                <a href="delete.html">Delete Product</a>
+            </li>
+        </ul>
+        <ul class="Logout">
+            <li>
+                <i class='bx bx-log-out'></i>
+                <a href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="home-content">
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Fetch Updated Data list</div>
+            <div class="sales-details">
+              <!-- Fetch Updated Data -->
+            </div>
+          </div>
+            <div id="form">
+              <p>Add Items</p>
+              <form>
+                <input type="number" id="addid" placeholder="Enter Id" required />
+                <input type="mail" id="addCategory" placeholder="Image Link" required />
+                <input type="text" id="addTitle" placeholder="Enter Title" required />
+                <input type="number" id="addPrice" placeholder="Enter price" required />
+  
+                <p style="color: black;margin-bottom: 25px; margin-top: 25px">
+                  Note: Product details will get updated in the site, make sure
+                  before updating details.
+                </p>
+                <input style="font-size: 18px; width: 94%" type="button" id="addBtn" value="Add Product" />
+              </form>
+  
+            </div>
+          </div>
+        </div>
+   
+    </main>
+</body>
+<script src="/src/product.js"></script>
+</html>

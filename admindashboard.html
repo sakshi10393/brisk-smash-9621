@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminDashboard</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/style/admindashboard.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="image">
+            <img src="/image/EliteLease.jpg" alt="error">
+        </div>
+        <div class="brand">
+            EliteLease
+        </div>
+        <div class="right">
+            <p>Hey! <span id="adminname"></span></p>
+        </div>
+    </div>
+    <main>
+         <!-- side bar -->
+        <div class="sidebar">
+        <ul class="centre">
+            <li class="active">
+                <i class='bx bx-grid-alt'></i>
+                <a href="admindashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <i class='bx bx-folder-plus'></i>
+                <a href="product.html">Add Product</a>
+            </li>
+            <li>
+                <i class='bx bx-edit-alt'></i>
+                <a href="edit.html">Edit Product</a>
+            </li>
+            <li>
+                <i class='bx bx-message-square-minus'></i>
+                <a href="delete.html">Delete Product</a>
+            </li>
+        </ul>
+        <ul class="Logout">
+            <li>
+                <i class='bx bx-log-out'></i>
+                <a href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="product">
+        <div class="upper">
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Items</div>
+                    <div class="number" id="totalApicount">0</div>
+                    <div class="indicator">
+                        <i class='bx bx-up-arrow-alt'></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class='bx bx-cart-alt cart'></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Newly Add</div>
+                    <div class="number" id="NewlyAdd">0</div>
+                    <div class="indicator">
+                        <i class='bx bx-up-arrow-alt'></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class='bx bxs-cart-add cart two'></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Total Edit</div>
+                    <div class="number" id="TotalEdited">0</div>
+                    <div class="indicator">
+                        <i class='bx bx-up-arrow-alt'></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class='bx bx-cart cart three'></i>
+            </div>
+            <div class="box">
+                <div class="right-side">
+                    <div class="box-topic">Delete Item</div>
+                    <div class="number" id="TotalDelete">0</div>
+                    <div class="indicator">
+                        <i class='bx bx-up-arrow-alt'></i>
+                        <span class="text">Up from yesterday</span>
+                    </div>
+                </div>
+                <i class='bx bxs-cart-download cart four'></i>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="left">
+                <div class="title">Admin Details :-</div>
+                <div class="admindata">
+                    <!-- append data -->
+                </div>
+            </div>
+            <div class="right">
+                <div class="title">Admin's Team</div>
+                <div class="teamdata">
+                    <ul class="data">
+                        <li>Anshumaan Baaghi(IA)</li>
+                        <li>Sakshi Kumari(Team Lead)</li>
+                        <li>Kuldeep Singh Negi(Team Member)</li>
+                        <li>Kuldeep Kumar Mahto(Team Member)</li>
+                        <li>Sharun N D(Team Member)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+<script src="/src/admindashboard.js"></script>
+</html>

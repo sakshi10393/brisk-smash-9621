@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+    <div id="navbar">
+
+        <div onclick="goToHome()"><img src="./logo.png.jpg" alt="err">
+                
+        </div>
+    
+            <div>Elite lease </div>
+            
+           
+           
+            
+    
+    
+            <div>
+                <div id="location">
+                    <p id="change_location"><select>     
+    
+                        <option value="">Jaipur</option>
+                        <option value="">Bangalore</option>
+                        <option value="">Mumbai</option>
+                        <option value="">Pune</option>
+                        <option value="">Delhi</option>
+                        <option value="">Noida</option>
+                        <option value="">Gurgaon</option>
+                        <option value="">Hyderabad</option>
+                        <option value="">Chennai</option>
+                        <option value="">Ahmedabad</option>
+                    
+                    
+                    
+                    
+                    </select>
+                </p>
+                <!-- <img src="https://cdn.icon-icons.com/icons2/1904/PNG/512/downarrow_121316.png" alt=""> -->
+                </div>
+            </div>
+    
+            <div><input type="text" id="nav_search" oninput="nav_search_fn()"
+                 placeholder="Search for Product " >
+            <!-- <input type="image" src="./search.png"> -->
+            <div> <img src="./search.png" alt=""></div>
+            </div>
+    
+    
+            <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="cart_clicked()" alt=""></div>
+    
+            
+            <div><button id="home_login_button" onclick="show_login_popup()">LOGIN / SIGNUP</button></div>
+        </div>
+    <div id="container">
+        <!-- append items here -->
+    </div>
+</body>
+<script src="./wishlist.js"></script>
+</html>
