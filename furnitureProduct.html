@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture Products</title>
     <link rel="stylesheet" href="furnitureProduct.css">
-    <script src="https://kit.fontawesome.com/cf62c39274.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- <a href="./productDetails.html">productDetails</a> -->
     <div id="header">
         <ul class="breadcrumb">
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="furnitureProduct.html">Furniture</a></li>
         </ul>
         <div class="productLinksDiv">
@@ -26,25 +26,17 @@
     </div>
     <div id="container">
         <div id="filter-sideBar">
-            <p class="filters-text"><i class="fa-solid fa-filter fa-sm"></i> Filters</p>
-            <div id="rooms-filter-parent">
+            <div class="rooms-filter-parent">
                 <div id="rooms-filter">
-                    <p>ROOMS</p>
-                    <input type="checkbox" name="bedroom" value="bedroom" id="bedroom">
-                    <label for="bedroom">Bedroom</label><br>
-                    <input type="checkbox" name="livingroom" value="livingroom" id="livingroom">
-                    <label for="livingRoom">livingRoom</label><br>
-                    <input type="checkbox" name="baby">
-                    <label for="baby">babyFurniture</label><br>
-                    <input type="checkbox" name="kitchen">
-                    <label for="kitchen">Kitchen</label><br>
-                    <input type="checkbox" name="Wfh">
-                    <label for="Wfh">Work From Home</label><br>
+                    <input type="checkbox" name="Zebronics">Zebronics <br>
+                    <input type="checkbox" name="livingRoom">Living Room <br>
+                    <input type="checkbox" name="babyFurniture">Baby Furniture <br>
+                    <input type="checkbox" name="kitchen">Kitchen & Dining <br>
+                    <input type="checkbox" name="wfh">Work From Home (WFH) <br>
                 </div>
             </div>
             <div id="product-type-filter-parent">
                 <div class="product-type-filter">
-                    <p>PRODUCT TYPE</p>
                     <input type="checkbox" name="sofa">Sofas <br>
                     <input type="checkbox" name="bed">Beds <br>
                     <input type="checkbox" name="mattresses">Mattresses <br>
@@ -53,12 +45,8 @@
                     
                 </div>
             </div>
-            <select id="sort">
-                <option value="">Sort by:Recommended</option>
-                <option value="highLow">Sort by: Price: High To Low</option>
-                <option value="lowHigh">Sort by:Price: Low To High</option>
-            </select>
         </div>
+    
         <div id="data-list-wrapper">
             <!-- append data here -->
         </div>
