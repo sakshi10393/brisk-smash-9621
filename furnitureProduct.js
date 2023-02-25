@@ -1,6 +1,7 @@
 
 let mainSection = document.getElementById("data-list-wrapper")
 let productArray =JSON.parse(localStorage.getItem("View Details")) || [];;
+let wishlistArray = JSON.parse(localStorage.getItem("wishlist")) || []
 // let cartArray =JSON.parse(localStorage.getItem("cart")) || [];
 let bedroom = document.getElementById("bedroom")
 let checkBoxs = document.querySelectorAll("#rooms-filter input")
@@ -74,13 +75,14 @@ function display(data){
     mainSection.innerHTML="";
     data.forEach(element => {
         let card = document.createElement("div")
+        card.classList.add("card")
 
         let image = document.createElement("img")
         let title = document.createElement("h3")
         let price = document.createElement("p")
         let addToCartBtn = document.createElement("button")
-        
-
+        let wishlishBtn = document.createElement("button")
+        wishlishBtn.classList.add("wishlistBtn")
         
         image.setAttribute("src",element.img)
         title.innerText = element.title;
@@ -92,11 +94,13 @@ function display(data){
         let quickViewBtn = document.createElement("button")
         quickViewBtn.classList.add("quick-view")
         quickViewBtn.innerText = "View Details"
-        // addToCartBtn.addEventListener("click",(e)=>{
-        //     e.preventDefault();
-        //     cartArray.push(element)
-        //     localStorage.setItem("cart",JSON.stringify(cartArray))
-        // })
+        wishlishBtn.innerText = "Wishlist"
+        wishlishBtn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            wishlishBtn.innerText = "Wishlisted"
+            wishlistArray.push(element)
+            localStorage.setItem("wishlist",JSON.stringify(wishlistArray))
+        })
        
         quickViewBtn.addEventListener("click",(e)=>{
             e.preventDefault();
@@ -104,7 +108,7 @@ function display(data){
             localStorage.setItem("view-details",JSON.stringify(productArray))
             window.location.href = "productDetails.html"
         })
-        card.append(image,title,price,quickViewBtn);
+        card.append(image,title,wishlishBtn,price,quickViewBtn);
         mainSection.append(card);
     });
 
