@@ -2,12 +2,10 @@ let productArr = JSON.parse(localStorage.getItem("view-details")) || [];
 let cartArray =JSON.parse(localStorage.getItem("cart")) || [];
 let leftCard = document.getElementById("left-card")
 let rightCard = document.getElementById("right-card")
-
 display(productArr)
 
 function display(data){
     leftCard.innerHTML="";
-    console.log(data)
     data.forEach(element => {
         let card1 = document.createElement("div")
         let card2 = document.createElement("div")
