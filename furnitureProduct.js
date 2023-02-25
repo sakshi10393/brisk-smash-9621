@@ -2,9 +2,11 @@
 let mainSection = document.getElementById("data-list-wrapper")
 let productArray =JSON.parse(localStorage.getItem("View Details")) || [];;
 let wishlistArray = JSON.parse(localStorage.getItem("wishlist")) || []
-// let cartArray =JSON.parse(localStorage.getItem("cart")) || [];
+
 let bedroom = document.getElementById("bedroom")
-let checkBoxs = document.querySelectorAll("#rooms-filter input")
+let checkBoxs = document.querySelectorAll("#rooms-filter input");
+let searchEl = document.getElementById("search");
+// let searchInp = document.getElementById("nav_search")
 
 checkBoxs.forEach((inputTag)=>{
     inputTag.addEventListener('change',filterData)
@@ -12,9 +14,9 @@ checkBoxs.forEach((inputTag)=>{
 
 let sortEl = document.getElementById("sort")
 
-let url = "https://jsonservereliteleaseproject.onrender.com/Furniture";
-let sortDesc = "https://jsonservereliteleaseproject.onrender.com/Furniture?_sort=price&_order=desc";
-let sortAsc = "https://jsonservereliteleaseproject.onrender.com/Furniture?_sort=price&_order=asc";
+let url = "https://projecteliteleasejsonserver.onrender.com/Furniture";
+let sortDesc = "https://projecteliteleasejsonserver.onrender.com/Furniture?_sort=price&_order=desc";
+let sortAsc = "https://projecteliteleasejsonserver.onrender.com/Furniture?_sort=price&_order=asc";
 
 
   let productData=[];
@@ -39,6 +41,22 @@ let sortAsc = "https://jsonservereliteleaseproject.onrender.com/Furniture?_sort=
     display(productData)
   }
   
+  searchEl.addEventListener("click",(e)=>{
+    e.preventDefault();
+    // console.log(element.type)
+    let searchInp = document.getElementById("nav_search").value;
+    let filtered = productData.filter(element=>{
+            if(element.type.toUpperCase().includes(searchInp.toUpperCase())==true){
+                return true;
+            }else{
+                return false;
+            }
+        
+    })
+    console.log(filtered)
+    display(filtered)
+
+})
 
 async function fetchSortDesc(){
     try {

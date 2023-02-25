@@ -217,7 +217,7 @@
    
   }
   .card{
-    line-height: 40px;
+    line-height: 30px;
   }
   #container div button{
     position: relative;
@@ -231,3 +231,9 @@
     -ms-transform:  -50%,-50%; */
     /* right: 20px; */
 }
+.card h3{
+    margin-left: 10px;
+  }
+  .card p{
+    margin-left: 10px;
+  }
