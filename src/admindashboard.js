@@ -1,5 +1,5 @@
-const url = `https://jsonservereliteleaseproject.onrender.com/admin`;
-const url1 = `https://jsonservereliteleaseproject.onrender.com/Furniture`;
+const url = `https://projecteliteleasejsonserver.onrender.com/admin`;
+const url1 = `https://projecteliteleasejsonserver.onrender.com/Furniture`;
 let totalApicountEl = document.getElementById("totalApicount");
 let admindataEl = document.querySelector(".admindata");
 
