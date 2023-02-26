@@ -37,7 +37,7 @@ btnEL.addEventListener("click",(e)=>{
     // let Title = titleEl.value;
     // let Price = priceEl.value;
     addproduct(Id);
-    alert("Product Edited")
+    alert("Product Deleted")
     fetchData()
 })
 

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="/o3qd9acvznwgmslknql7.avif" type="image/x-icon">
+
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+
+      form > input {
+        margin-top: 20px;
+        height: 30px;
+        width: 400px;
+        border-radius: 4px;
+      }
+
+      .maincon {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        width: 80%;
+        margin: auto;
+        padding-bottom: 7%;
+        border-radius: 5px;
+        /* background-color: aqua; */
+
+        height: 400px;
+      }
+
+      h3 {
+        text-align: center;
+        color: #dc3226;
+        font-size: 40px;
+        margin-bottom: 1rem;
+      }
+
+      .sub {
+        align-items: center;
+        border-radius: 3px;
+        margin-top: 18%;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        border: 1px solid #dc3226;
+        height: 2rem;
+        font-weight: 600;
+      }
+
+      .sub:hover {
+        background-color: white;
+        cursor: pointer;
+        color: #dc3226;
+      }
+
+      input {
+        padding-left: 2%;
+      }
+
+      #rhs {
+        margin-top: 2%;
+      }
+
+      #total {
+        margin-top: 3%;
+      }
+
+      #navbar {
+        display: none;
+      }
+
+      .add {
+        font-size: large;
+        align-items: center;
+        text-align: center;
+        padding-left: 18%;
+        text-decoration: underline;
+        font-weight: 700;
+      }
+
+      .pay {
+        padding-left: 20%;
+        text-decoration: underline;
+        font-size: larger;
+        font-weight: 700;
+      }
+
+      .rhs {
+        width: 40%;
+        margin-top: 1%;
+      }
+      .buttonn {
+        background-color: red;
+       padding: 10px;
+       border-radius: 16px;
+       text-decoration: none;
+       color:white
+      }
+    </style>
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+
+  <body>
+    <div id="navbar">
+      <div>
+        <img
+          src="https://www.rentomojo.com/public/images/Home/new/ham__icon.svg"
+          id="dropdown_menu_open"
+          alt=""
+        /><img
+          src="https://www.rentomojo.com/public/images/Home/new/logo.svg"
+          alt=""
+        />
+      </div>
+      <div onclick="goToHome()"><img src="rentomarket (3).png" alt="" /></div>
+      <div>
+        <div id="location">
+          <!-- <p id="change_location"><b>WELCOME TO THE ADMIN PAGE</b></p> -->
+        </div>
+      </div>
+    </div>
+    <h2 id="total"></h2>
+    <h3 class="mainhead">Enter Your Address And Payment Details</h3>
+    <div class="maincon">
+      <div class="lhs">
+        <form action="">
+          <label for="" class="add">Address Details</label>
+          <input type="text" placeholder="Name" class="s1" /><br />
+
+          <input type="number" placeholder="Phone No." class="s2" /><br /><input
+            type="text"
+            placeholder="Address(Area and Street)"
+            class="s3"
+          /><br /><input
+            type="text"
+            placeholder="City/District/Town"
+            class="s4"
+          /><br />
+          <input type="number" placeholder="Pin-Code" class="s5" /><br />
+          <input
+            type="number"
+            placeholder="Alternate No. (Optional)"
+            class="s6"
+          /><br />
+          <!-- //<input type="submit"> -->
+        </form>
+      </div>
+      <div class="rhs">
+        <form action="" id="rhsform">
+          <br /><br /><br />
+          <label for="" class="pay">Payment Details</label>
+          <input
+            type="text"
+            placeholder="Name of Account Holder"
+            class="s7"
+          /><br />
+
+          <input type="number" placeholder="Card No." class="s8" /><br /><input
+            type="number"
+            placeholder="Cvv"
+            minlength="3"
+            maxlength="3"
+            min="111"
+            max="999"
+            class="s9"
+          /><br />
+          <input
+            type="number"
+            min="1"
+            max="12"
+            placeholder="Exp Month"
+            class="s10"
+          />
+          <input type="number" placeholder="Exp Year" min="1995" class="s11" />
+          <div style="margin: 10%;"><a  class="buttonn" href="thankyou.html">Submit</a></div>
+
+          
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  data_item = JSON.parse(localStorage.getItem("cartpage"));
+  console.log(data_item);
+  let sum = 0;
+  data_item.map((item) => {
+    console.log(item.price);
+    sum = sum + Number(item.price);
+  });
+
+  document.querySelector("#total").innerText =
+    "Your Cart Amount " + (sum || 0) + " " + "₹";
+
+  document.querySelector("#rhsform").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let data1 = document.querySelector(".s1");
+    let data2 = document.querySelector(".s2");
+    let data3 = document.querySelector(".s3");
+    let data4 = document.querySelector(".s4");
+    let data5 = document.querySelector(".s5");
+    let data6 = document.querySelector(".s6");
+    let data7 = document.querySelector(".s7");
+    let data8 = document.querySelector(".s8");
+    let data9 = document.querySelector(".s9");
+    let data10 = document.querySelector(".s10");
+    let data11 = document.querySelector(".s11");
+
+    data9.value.length = 3;
+
+    if (data1.value === "") {
+      alert("Please enter the Name");
+    } else if (data2.value == "") {
+      alert("Please enter the Phone.No");
+    } else if (data3.value == "") {
+      alert("Please enter the Address");
+    } else if (data4.value == "") {
+      alert("Please enter the City");
+    } else if (data5.value == "") {
+      alert("Please enter the Pin-Code");
+    } else if (data8.value == "") {
+      alert("Please enter the Account Holder Name");
+    } else if (data8.value == "") {
+      alert("Please enter the Card No.");
+    } else if (data8.value.length < 11 || data8.innerText.value > 11) {
+      alert("Please check the Card No.");
+    } else if (data9.value == "") {
+      alert("Please enter the Phone.No");
+    } else if (data9.value.length < 3 || data9.value.length > 3) {
+      alert("Please enter correct Cvv");
+    } else if (data10.value < 1 && data10.value > 12) {
+      alert("Please Check Exp Month");
+    } else if (data11.value == "") {
+      alert("Please Enter Exp year");
+    } else if (data11.value < 2022) {
+      alert("Your Card is Expired");
+    } else {
+      console.log("S");
+      window.location.href = "cvv.html";
+    }
+    console.log("s");
+  });
+
+  function submitted() {
+    // alert("Payment Successfull");
+    window.location.href="thankyou.html";
+    
+  }
+</script>

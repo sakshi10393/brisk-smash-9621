@@ -1,37 +1,34 @@
 
-
-
-
-
-
 let dataArr = JSON.parse(localStorage.getItem("cart"))||[];
-display(dataArr)
+console.log(dataArr)
+let mainSection =document.getElementById("cart")
+let emptycard=document.getElementById("emptyCart")
+if(dataArr.length>0){
+ emptycard.style.display="none"
+} display(dataArr)
+
 function display(data){
-    mainSection =document.getElementById("emptyCart")
+  
     data.forEach(element => {
         let card = document.createElement("div")
 
         let image = document.createElement("img")
         let title = document.createElement("h3")
         let price = document.createElement("p")
-        let addToCartBtn = document.createElement("button")
-        
-
-        
-        image.setAttribute("src",element.image)
-        title.innerText = element.title;
+        let Buy = document.createElement("button")
+        image.src=element.img;
+        title.textContent=element.title;
        
         price.innerText = `₹${element.price}`;
-        addToCartBtn.innerText = "Add To Cart"
+         Buy.innerText = "Buy Now"
         
         
-        addToCartBtn.addEventListener("click",(e)=>{
-            e.preventDefault();
-            cartArray.push(element)
-            localStorage.setItem("cart",JSON.stringify(cartArray))
+        Buy.addEventListener("click",()=>{
+           
+            window.location.href = "payment.html";
         })
 
-        card.append(image,title,price,addToCartBtn);
+        card.append(image,title,price,Buy);
         mainSection.append(card);
     });
 }

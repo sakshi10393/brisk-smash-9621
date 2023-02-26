@@ -51,14 +51,35 @@
         <div><input type="text" id="nav_search" oninput="nav_search_fn()"
              placeholder="Search for Product " >
         <!-- <input type="image" src="./search.png"> -->
-        <div> <img src="./search.png" alt=""></div>
+        <div> <a href="cart.html"> <img src="./search.png" alt=""> </a> </div>
         </div>
+        <!-- <img src="./search.png" alt=""> -->
 
-
-        <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="cart_clicked()" alt=""></div>
+        <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="window.open('cart.html')"></div>
 
         
-        <div><button id="home_login_button" onclick="show_login_popup()">LOGIN / SIGNUP</button></div>
+        <div id="loginn"><button id="login_btn"  onclick="show_login_popup()"><a href="login.html">LOGIN </a>
+            <a href="">/ SIGNUP</a></button></div>
+    </div>
+
+    <div id="log">
+        <div>
+            <img src="/image/cat.png" height="300px" width="300px" />
+        </div>
+        <div id="log_2">
+        <div><button id="login_hide_btn">+</button></div>
+        <div>
+             <p>Enter your number to Login</p> 
+            <input type="text" id="mobileNo" placeholder="Enter Your Mobile Number">
+            <div id="otp">
+                <input type="text" id="OtpNo" placeholder="Enter Your OTP">
+            </div>
+        </div>
+        <div>
+            <Button id="loginButton" onclick="alter()">Login</Button>
+        </div>
+        <button style="width: 50px; display: block; margin: auto; "><a style="text-decoration: none; color: black;" href="adminlogin.html">Admin</a></button>
+    </div>
     </div>
 
  <!-- ------------------------------------------------------------------------------------------------   -->
@@ -185,17 +206,17 @@
 
         <div> <img src="./furniture.png" alt="" /></div>
     </a>
-    <a href="appliances.html">
+    <a href="Furniture.html">
 
         <div> <img src="./appliances.png" alt="" /></div>
     </a>
-    <a href="appliances.html">
+    <a href="Furniture.html">
     <div> <img src="./electronics.png" alt="" /></div>
     </a>
     <a href="furniture.html">
     <div><img src="./bikes.png" alt="" /></div>
     </a>
-    <a href="appliances.html">
+    <a href="Furniture.html">
     <div><img src="./wfh.png" alt="" /></div>
     </a>
 </div>
@@ -212,13 +233,13 @@
         <h2 class="thin">take these home</h2>
 
 
-<div id="mainProducts" onclick="window.open('appliances.html')">
+<div id="mainProducts" onclick="window.open('Furniture.html')">
 
 
    <div>
      <img src="https://p.rmjo.in/productSquare/247ark4n-500x500.jpg" alt="">
      <h5>Felix 3-Seater Fabric Sofa</h5>
-     <div> <span>₹ 789/Month</span> <button onclick="window.open('furniture.html')" >See more</button></div>
+     <div style="line-height: 40px;"> <span>₹ 789/month</span> <button onclick="window.open('Furniture.html')" >See more</button></div>
    </div>
 
 
@@ -226,28 +247,28 @@
    <div>
     <img src="https://p.rmjo.in/productSquare/9o9eoir3-500x500.jpg" alt="">
     <h5>Garfield Ottoman Sofa</h5>
-    <div> <span>₹ 189/Month</span> <button onclick="window.open('furniture.html')">See more</button></div>
+    <div style="line-height: 40px;"> <span>₹ 189/month</span> <button onclick="window.open('Furniture.html')">See more</button></div>
   </div>
 
 
   <div>
     <img src="https://p.rmjo.in/productSquare/xal2ozbg-500x500.jpg" alt="">
     <h5>LED TV - 32"</h5>
-    <div> <span>₹ 949/Month</span> <button onclick="window.open('appliances.html')">See more</button></div>
+    <div style="line-height: 40px;" > <span>₹ 949/month</span> <button onclick="window.open('Furniture.html')">See more</button></div>
   </div>
 
 
   <div>
     <img src="https://p.rmjo.in/productSquare/f9pryp0h-500x500.jpg" alt="">
-    <h5>Top Load Washing Machine</h5>
-    <div> <span>₹ 769/Month</span> <button onclick="window.open('appliances.html')">See more</button></div>
+    <h5>Washing Machine</h5>
+    <div style="line-height: 40px;"> <span>₹ 769/month</span> <button onclick="window.open('Furniture.html')">See more</button></div>
   </div>
 
 
   <div >
     <img src="https://p.rmjo.in/productSquare/b28pmhld-500x500.jpg" alt="">
-    <h5>Casper 3-Seater Fabric Sofa</h5>
-    <div> <span>₹ 719/Month</span> <button onclick="window.open('furniture.html')">See more</button></div>
+    <h5>Fabric Sofa</h5>
+    <div style="line-height: 40px;"> <span>₹ 719/month</span> <button onclick="window.open('Furniture.html')">See more</button></div>
   </div>
 
 
@@ -348,7 +369,7 @@
             <h2 id="un" style="margin: 40px 0px;">Over 1.5 lac happy subscribers</h2>
             <p>Here's what they</p>
             <p>have to say about</p>
-            <p>their Rentomarket</p>
+            <p>their Elite-Lease</p>
             <p>experience.</p>
 
             <!-- Next and previous buttons -->
@@ -378,7 +399,7 @@
             <div class="mySlides4">
                 <div class="numbertext">2 / 4</div>
 
-                <img src="https://www.rentomojo.com/public/images/testimonials/navin-kumar.jpg">
+                <img src="./image/1.jpg">
                 <h3>Kuldeep Negi</h3>
                 <p>
                     When I moved to Bangalore from Chennai, I went to multiple websites to get a bed until I
@@ -392,7 +413,7 @@
             <div class="mySlides4">
                 <div class="numbertext">3 / 4</div>
 
-                <img src="https://www.rentomojo.com/public/images/testimonials/anjali-sharma.jpg">
+                <img src="./image/2.jpg">
                 <h3>Sakshi Kumari</h3>
                 <p>
                     I got to know about Elite-Lease through a friend and looked up for AC on their website and
@@ -406,7 +427,7 @@
            <div class="mySlides4">
                 <div class="numbertext">4 / 4</div>
 
-                <img src="https://www.rentomojo.com/public/images/testimonials/shreyas-ravetkar.jpg">
+                <img src="./image/3.jpg">
                 <h3>Sharun ND</h3>
                 <p>
                     Elite-Lease was unbelievably helpful. Never thought that setting up a new place would be just
@@ -416,34 +437,6 @@
                     been two great years and I am sure there are many more to come.
                 </p>
             </div>
-
-
-            <!-- <div class="mySlides4">
-                <div class="numbertext">5 / 6</div>
-
-                <img src="https://www.rentomojo.com/public/images/testimonials/nikita-sharma.jpg">
-                <h3>Fauziya Anjum</h3>
-                <p>
-                    The thought of renting the furniture had never occurred to me. When I saw Elite-Lease's
-                    affordable range, I was super excited to try and it was really amazing. From service to
-                    product quality, everything was superb. I don't have to carry the same furniture to every
-                    house I move to and can change the look of my home whenever I want
-                </p>
-            </div>
-            <div class="mySlides4">
-                <div class="numbertext">6/ 6</div>
-
-                <img src="https://www.rentomojo.com/public/images/testimonials/manish-srivastava.jpg">
-                <h3>Manish Srivastava</h3>
-                <p>
-                    I was suddenly asked to move to Chennai from Bengaluru in couple of days. Everything was
-                    garbled for me and huge tension of getting apartment, buying furnitures, selling while going
-                    back to Bangalore. Thanks to Elite-Lease for excellent budgeted plans. With few mouse clicks
-                    and nominal security deposit u are done. No tension for delivery,Elite-Lease is a furniture
-                    wish wizard. Also takes care of relocation made my life easy. Happy to be a customer for
-                    Elite-Lease. It made my house a happy home!
-                </p>
-            </div> -->
         </div>
 
     </div>

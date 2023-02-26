@@ -368,9 +368,16 @@
   #cart {
     padding: 20px 0px;
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(4, 1fr);
   }
-  
+  #cart>div{
+    border: 2px solid blueviolet;
+    width:100%;
+  }
+  #cart>div>img{
+    width: 100%;
+  }
   #cartItem {
     display: flex;
     flex-direction: column;

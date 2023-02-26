@@ -8,46 +8,72 @@
     <link rel="stylesheet" href="/cart.css" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="shortcut icon" href="/o3qd9acvznwgmslknql7.avif" type="image/x-icon">
+<link rel="stylesheet" href="index.css">
+
 
   </head>
 
   <body>
-    <div id="navbar">
-      <div onclick="goToHome()"><img src="./logo.png.jpg" alt="err">
+    
+
+    <!-- Navbar section start-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+  <div id="navbar">
+
+    <div>
+      <a href="/index.html"><img src="./logo.png.jpg" alt="err"></a>
             
-      </div>
-  
-          <div><img src="./Elitelogo.png" alt=""> </div>
-      <div>
-        <img
-          src="https://www.rentomojo.com/public/images/Home/new/ham__icon.svg"
-          id="dropdown_menu_open"
-          alt=""
-        />
-      </div>
-      <div onclick="goToHome()">
-        <img src="rentomarket (3).png" alt="" />
-      </div>
-      <div>
-        <div id="location">
-          <p id="change_location">Jaipur</p>
-          <img
-            src="https://cdn.icon-icons.com/icons2/1904/PNG/512/downarrow_121316.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <div>
-        <input
-          type="text"
-          id="nav_search"
-          oninput="nav_search_fn()"
-          placeholder="Search for Product"
-        />
-      </div>
-      <div><img src="img/cart.png" onclick="cart_clicked()" alt="" /></div>
-      <!-- <div><button id="home_login_button">LOGIN / SIGNUP</button></div> -->
     </div>
+
+        <div>Elite lease </div>
+        
+       
+       
+        
+
+
+        <div>
+            <div id="location">
+                <p id="change_location"><select>     
+
+                    <option value="">Jaipur</option>
+                    <option value="">Bangalore</option>
+                    <option value="">Mumbai</option>
+                    <option value="">Pune</option>
+                    <option value="">Delhi</option>
+                    <option value="">Noida</option>
+                    <option value="">Gurgaon</option>
+                    <option value="">Hyderabad</option>
+                    <option value="">Chennai</option>
+                    <option value="">Ahmedabad</option>
+                
+                
+                
+                
+                </select>
+            </p>
+            <!-- <img src="https://cdn.icon-icons.com/icons2/1904/PNG/512/downarrow_121316.png" alt=""> -->
+            </div>
+        </div>
+
+        <div><input type="text" id="nav_search" oninput="nav_search_fn()"
+             placeholder="Search for Product " >
+        <!-- <input type="image" src="./search.png"> -->
+        <div> <a href="cart.html"> <img src="./search.png" alt=""> </a> </div>
+        </div>
+        <!-- <img src="./search.png" alt=""> -->
+
+        <div><img src="https://storied-mermaid-e7f527.netlify.app/img/cart.png" onclick="cart_clicked()" alt=""></div>
+
+        
+        <div><button id="home_login_button" onclick="show_login_popup()"><a href="login.html">LOGIN </a>
+            <a href="">/ SIGNUP</a></button></div>
+    </div>
+
+ <!-- ------------------------------------------------------------------------------------------------   -->
+<!-- Navbar section end-->
+ <!-- ------------------------------------------------------------------------------------------------   -->
+
     <div id="menu">
       <div>
         <div>
@@ -116,7 +142,9 @@
       <div><button onclick="goToHome()">Browse catalogue</button></div>
     </div>
     <div id="checkout"></div>
-    <div id="cart"></div>
+    <div id="cart">
+      <!-- card should append here -->
+    </div>
   </body>
   <script src="/cart.js"></script>
 </html>

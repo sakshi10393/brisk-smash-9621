@@ -65,6 +65,7 @@ function display(data){
             e.preventDefault();
             cartArray.push(element)
             localStorage.setItem("cart",JSON.stringify(cartArray))
+            alert("Item Added To Cart")
         })
 
         div22.append(title2,desc,price,size)
