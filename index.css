@@ -710,8 +710,8 @@ font-size: 12px;
 width: 100px;
 font-weight: 700;
 background-color: rgb(230, 118, 118);
-color:white
-
+color:white;
+cursor: pointer;
 }
 
 #loginn {
@@ -723,4 +723,5 @@ color:white
   border: 1px solid #dc3226;
   padding: 15px 18px;
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  cursor: pointer;
 }
