@@ -2,6 +2,7 @@
 let mainSection = document.getElementById("data-list-wrapper")
 let productArray =JSON.parse(localStorage.getItem("View Details")) || [];;
 let wishlistArray = JSON.parse(localStorage.getItem("wishlist")) || []
+let paginationCard = document.getElementById("pagination-card")
 
 let bedroom = document.getElementById("bedroom")
 let checkBoxs = document.querySelectorAll("#rooms-filter input");
@@ -20,8 +21,11 @@ let sortAsc = "https://projecteliteleasejsonserver.onrender.com/Furniture?_sort=
 
 
   let productData=[];
-  async function fetchAndRenderProducts(){
-    let res = await fetch(url)
+  async function fetchAndRenderProducts(pageNumber){
+    let res = await fetch(`${url}?_page=${pageNumber}&_limit=13`)
+    let totalUsers = res.headers.get("X-Total-Count");
+    console.log(totalUsers)
+    showPagination(totalUsers,10)
     let data = await res.json()  
 
     productData = data.map(function(element){
@@ -94,7 +98,7 @@ function display(data){
     data.forEach(element => {
         let card = document.createElement("div")
         card.classList.add("card")
-
+        let button = document.createElement("button")
         let image = document.createElement("img")
         let title = document.createElement("h3")
         let price = document.createElement("p")
@@ -105,7 +109,7 @@ function display(data){
         image.setAttribute("src",element.img)
         title.innerText = element.title;
        
-        price.innerText = `₹${element.price}`;
+        price.innerText = `₹${element.price}/mo`;
         addToCartBtn.innerText = "Add To Cart"
         
         
@@ -113,6 +117,8 @@ function display(data){
         quickViewBtn.classList.add("quick-view")
         quickViewBtn.innerText = "View Details"
         wishlishBtn.innerText = "Wishlist"
+        button.innerText = "1"
+
         wishlishBtn.addEventListener("click",(e)=>{
             e.preventDefault();
             wishlishBtn.innerText = "Wishlisted"
@@ -134,6 +140,29 @@ function display(data){
     
 }
 
+// pagination
+
+function showPagination(totalItems,limit){
+    let numberOfBtns = Math.ceil(totalItems/limit)
+    paginationCard.innerHTML=null;
+    for(let i=1;i<=numberOfBtns;i++){
+        paginationCard.append(getButton(i,i))
+    }
+}
+
+function getButton(text,pageNumber){
+    let button = document.createElement("button")
+    button.classList.add("pagination-button")
+    button.setAttribute("data-page-number",pageNumber)
+    button.innerText=text;
+
+    button.addEventListener("click",function(e){
+        let pageNumber = e.target.dataset["pageNumber"];
+        fetchAndRenderProducts(pageNumber)
+
+    })
+    return button;
+}
 // checkBox filter
 function filterData(){
         let arr=[]
@@ -166,7 +195,7 @@ function filterData(){
 }
 
 window.addEventListener("load", () => {
-    fetchAndRenderProducts();
+    fetchAndRenderProducts(1);
   });
 
 
