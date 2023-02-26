@@ -17,16 +17,18 @@ function display(data){
         image.setAttribute("src",element.img)
         title.innerText = element.title;
         price.innerText = `₹${element.price}`;
-        removebtn.innerText = "X"
+        removebtn.innerText = "X";
 
         removebtn.addEventListener("click",(e)=>{
             e.preventDefault();
             data=data.filter((el,i)=>{
+               
                 if(index==i){
                     return false;
                 }else{
                     return true;
                 }
+                
             })
             localStorage.setItem("wishlist",JSON.stringify(data));
             display(data)
